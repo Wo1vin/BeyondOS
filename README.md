@@ -4,7 +4,7 @@ Find projects to collaborate on, people to create with, or share your ideas for 
 
 Our world is becoming ever more interconnected through digitization, but there is still a gap when it comes to interpersonal collaboration. This gap is what Beyond Open Source seeks to fill in. The idea is to enable individuals to collaborate on open source projects by adding value with their skills and ideas. The key is to take the concept of “open source” beyond software. 
 
-**Link to project:** 
+**[future Link to project]** 
 
 ![wireframe of Beyond Open Source Home Page](http://)
 
