@@ -2,7 +2,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy
 const mongoose = require('mongoose')
 const User = require('../models/User')
 
-module.exports = function(passport){
+module.exports = passport => {
     passport.use(
         new GoogleStrategy({
             clientID: process.env.GOOGLE_CLIENT_ID,
@@ -35,10 +35,11 @@ module.exports = function(passport){
         process.nextTick(() => {
           cb(null, {
             id: user.id,
-            username: user.username,
-            picture: user.picture
+            name: user.firstName,
+            picture: user.image
           });
         });
+        // console.log(user)
     });
       
     passport.deserializeUser((user, cb) => {

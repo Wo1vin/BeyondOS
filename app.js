@@ -15,6 +15,7 @@ dotenv.config({ path: './config/.env' })
 
 // PASSPORT CONFIG
 require('./config/passport')(passport)
+
 // CONNECT DB
 connectDB()
 
@@ -26,8 +27,15 @@ if(process.env.NODE_ENV === 'development'){
 }
 
 // HANDLEBARS
-app.engine('.hbs', exphbs.engine({ defaultLayout: 'main', extname: '.hbs' }));
+// app.engine('.hbs', exphbs.engine({ defaultLayout: 'main', extname: '.hbs' }));
 app.set('view engine', '.hbs');
+//Sets handlebars configurations
+app.engine('.hbs', exphbs.engine({
+    layoutsDir: __dirname + '/views/layouts',
+    extname: '.hbs',
+    defaultLayout: 'main'
+}));
+
 
 // SESSION MIDDLEWARE
 app.use(session({
